@@ -18,11 +18,15 @@ import java.util.List;
  */
 public class ArtistListFragment extends Fragment {
 
+    List<String> listData;
+
     private SimpleRecyclerAdapter mSimpleRecyclerAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        initData();
     }
 
     @Override
@@ -36,21 +40,6 @@ public class ArtistListFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-
-        List<String> listData = new ArrayList<>();
-        listData.add("Мурзик");
-        listData.add("Барсик");
-        listData.add("Васька");
-        listData.add("Рыжик");
-        listData.add("Мурзик");
-        listData.add("Барсик");
-        listData.add("Васька");
-        listData.add("Рыжик");
-        listData.add("Мурзик");
-        listData.add("Барсик");
-        listData.add("Васька");
-        listData.add("Рыжик");
-
         if (mSimpleRecyclerAdapter == null) {
             mSimpleRecyclerAdapter = new SimpleRecyclerAdapter(listData);
             recyclerView.setAdapter(mSimpleRecyclerAdapter);
@@ -61,5 +50,23 @@ public class ArtistListFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_artist_list, container, false);
+        //return view;
+    }
+
+    private void initData() {
+        listData = new ArrayList<>();
+        listData.add("Мурзик");
+        listData.add("Барсик");
+        listData.add("Васька");
+        listData.add("Рыжик");
+        listData.add("Мурзик");
+        listData.add("Барсик");
+        listData.add("Васька");
+        listData.add("Рыжик");
+        listData.add("Мурзик");
+        listData.add("Барсик");
+        listData.add("Васька");
+        listData.add("Рыжик");
+
     }
 }
