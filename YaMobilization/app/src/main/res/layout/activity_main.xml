@@ -7,10 +7,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="xyz.copypastestd.yamobilization.MainActivity">
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:onClick="login"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_below="@+id/TW"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
 </RelativeLayout>
